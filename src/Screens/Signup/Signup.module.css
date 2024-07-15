@@ -1,0 +1,55 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background-color: white;
+  padding: 4rem;
+  width: 40rem;
+  height: 48rem;
+  border-radius: 1rem;
+}
+
+.form h1 {
+  font-size: 2.4rem;
+}
+.form span {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.container_input {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.select {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: .6rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    border-radius: .4rem;
+
+}
+
+.select label {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.select select {
+    border: none;
+    outline: none;
+}
+
+.select p {
+ font-size: 1.2rem;
+ color: gray;
+}
+
