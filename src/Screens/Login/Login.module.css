@@ -33,38 +33,6 @@
   margin-top: 2rem;
 }
 
-.container_input button {
-  padding: 1rem;
-  border: none;
-  background-color: #006989;
-  color: #fff;
-  border-radius: 0.4rem;
-  cursor: pointer;
-}
-
-.container_input_social button {
-  padding: 1rem;
-  border: none;
-  background-color: #F5F7F8;
-  color: #121213;
-  border-radius: 0.4rem;
-  cursor: pointer;
-}
-
-.container_input_social {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
-  
-}
-.container_input_social button {
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1); 
-}
-.container_input_social button:hover {
-  background-color: #E7F0DC;
-}
-
 .button_logo {
   width: 1.3rem;
   height: 1.3rem;
