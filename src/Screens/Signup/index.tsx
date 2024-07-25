@@ -12,17 +12,16 @@ const Signup = () => {
           <InputComponent label={"Nombre"} type={"text"} />
           <InputComponent label={"Email"} type={"text"} />
           <InputComponent label={"Password"} type={"text"} />
-        
-          <div className={style.select}>
-            <p>Rol</p>
-            <label htmlFor="Rol-select">Elige una opcion</label>
-            <select name="Rol-select" id="Rol-select">
-            <option value="">Selecciona un...</option>
-                <option value="administrador">Administrador</option>
-                <option value="invitado">Invitado</option>
-            </select>
-          </div>
+    
          <ButtonComponent label="Confirmar"/>
+        </div>
+        <div className={style.restore_password}>
+          <button>Has olvidado tu contraseña</button>
+        </div>
+        
+        <div  className= {style.footer_message}>
+          <span>¿Ya tienes una cuenta?</span>
+          <button>Inicia sesiòn aquì</button>
         </div>
       </div>
     </div>
