@@ -1,6 +1,7 @@
-import { GoogleComponent } from "../../components/ui/Google";
 import { InputComponent } from "../../components/ui/Input";
 import styles from "./Login.module.css";
+
+const url = "https://accounts.google.com";
 
 const Login = () => {
   return (
@@ -16,13 +17,25 @@ const Login = () => {
           />
         </div>
 
+
+
         <div className={styles.header_form}>
           <h2>Bienvenido</h2>
           <span>
             Encantado de verte nuevamente, ¡inicia sesion!
           </span>
         </div>
-       <GoogleComponent/>
+        <div className={styles.container_input_social}>
+          <button onClick={() => window.open(url, "_blank")}>
+            <img
+              src="/img/google.svg"
+              alt="Google logo"
+              className={styles.button_logo}
+            />
+
+            <b>Continua con Google</b>
+          </button>
+        </div>
         <div className={styles.container_input}>
           <InputComponent label="Correo" type="text" />
           <InputComponent label="Contraseña" type="password" />

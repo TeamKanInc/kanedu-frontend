@@ -28,33 +28,28 @@
   gap: 1rem;
 }
 
-.restore_password {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.select {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: .6rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    border-radius: .4rem;
+
 }
 
-.restore_password button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #006989;
-  font-weight: 600;
+.select label {
+    font-size: 1.2rem;
+    color: gray;
 }
 
-.footer_message {
-  margin-top: 3rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+.select select {
+    border: none;
+    outline: none;
 }
 
-.footer_message button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #006989;
-  text-transform: capitalize;
-  font-weight: 600;
+.select p {
+ font-size: 1.2rem;
+ color: gray;
 }
+
