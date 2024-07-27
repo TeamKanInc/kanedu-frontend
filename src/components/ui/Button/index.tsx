@@ -1,13 +1,14 @@
 import style from "./Button.module.css";
 
 interface Props {
-    label: string;
+  label: string;
+  onClick?: () => void;
 }
 
-export const ButtonComponent = ({label}: Props) => {
+export const ButtonComponent = ({ label, onClick }: Props) => {
   return (
     <div className={style.button}>
-      <button>{label}</button>
+      <button onClick={onClick}>{label}</button>
     </div>
   );
 };

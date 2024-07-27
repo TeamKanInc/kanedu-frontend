@@ -21,3 +21,10 @@
   .container_input_social button:hover {
     background-color: #E7F0DC;
   }
+
+  .btn_google{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
