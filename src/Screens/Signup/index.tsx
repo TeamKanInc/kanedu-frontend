@@ -5,24 +5,25 @@ import style from "./Signup.module.css";
 const Signup = () => {
   return (
     <div className={style.container}>
-      <div className={style.form}>
+      <div className={style.container_form}>
         <h1>Registrarse</h1>
         <span>Ingresa los detalles para crear tu cuenta</span>
+      <div className={style.form}>
         <div className={style.container_input}>
           <InputComponent label={"Nombre"} type={"text"} />
           <InputComponent label={"Email"} type={"text"} />
           <InputComponent label={"Password"} type={"text"} />
-        
-          <div className={style.select}>
-            <p>Rol</p>
-            <label htmlFor="Rol-select">Elige una opcion</label>
-            <select name="Rol-select" id="Rol-select">
-            <option value="">Selecciona un...</option>
-                <option value="administrador">Administrador</option>
-                <option value="invitado">Invitado</option>
-            </select>
-          </div>
+          <InputComponent label={"Phone"} type={"number"} />
+          <InputComponent label={"Code University"} type={"number"} />
          <ButtonComponent label="Confirmar"/>
+        </div>
+        <div className={style.passwordR}>
+        <button>¿Has olvidado tu contraseña?</button>
+        </div>
+      <div className={style.footer_message}>
+          <span></span>
+          <button>registrate aqui</button>
+        </div>
         </div>
       </div>
     </div>

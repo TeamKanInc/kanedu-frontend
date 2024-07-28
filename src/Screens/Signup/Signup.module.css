@@ -5,18 +5,25 @@
   align-items: center;
 }
 
-.form {
+.container_form{
   background-color: white;
-  padding: 4rem;
   width: 40rem;
-  height: 48rem;
+  height: 59rem;
   border-radius: 1rem;
+  padding: 5rem;
 }
 
-.form h1 {
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_form h1 {
   font-size: 2.4rem;
 }
-.form span {
+.container_form span {
   font-size: 1.2rem;
   color: gray;
 }
@@ -28,28 +35,45 @@
   gap: 1rem;
 }
 
-.select {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: .6rem;
-    display: flex;
-    flex-direction: column;
-    gap: .6rem;
-    border-radius: .4rem;
-
+.footer_message {
+  margin-top: 4rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.select label {
-    font-size: 1.2rem;
-    color: gray;
+.footer_message button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #006989;
+  text-transform: capitalize;
+  font-weight: 600;
 }
 
-.select select {
-    border: none;
-    outline: none;
+.passwordR{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  border-bottom: 0.01rem solid #0069898f;
 }
 
-.select p {
- font-size: 1.2rem;
- color: gray;
+.passwordR:hover{
+  border-bottom: 0.01rem solid #006f91;  
+}
+
+.passwordR button:hover, .footer_message button:hover{
+  color: #0189b3;
+}
+
+.passwordR button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #006989;
+  text-transform: capitalize;
+  font-weight: 600;
 }
 
