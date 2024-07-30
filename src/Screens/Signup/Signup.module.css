@@ -56,25 +56,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-  height: 5rem;
-  border-bottom: 0.01rem solid #0069898f;
-}
-
-.passwordR:hover{
-  border-bottom: 0.01rem solid #006f91;  
-}
-
-.passwordR button:hover, .footer_message button:hover{
-  color: #0189b3;
-}
-
-=======
   border-bottom: 0.01rem solid #006989;
   height: 5rem;
 }
 
->>>>>>> main
 .passwordR button{
   background-color: transparent;
   border: none;
