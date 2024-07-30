@@ -7,7 +7,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path={"/iniciar-sesion"} element={<Login />} />
+          <Route path={"/"} element={<Login />} />
           <Route path={"/registrarse"} element={<Signup />} />
         </Routes>
       </BrowserRouter>
