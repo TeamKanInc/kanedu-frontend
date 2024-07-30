@@ -5,13 +5,19 @@ import style from "./Signup.module.css";
 const Signup = () => {
   return (
     <div className={style.container}>
-      <div className={style.form}>
+      <div className={style.container_form}>
         <h1>Registrarse</h1>
         <span>Ingresa los detalles para crear tu cuenta</span>
+      <div className={style.form}>
         <div className={style.container_input}>
           <InputComponent label={"Nombre"} type={"text"} />
           <InputComponent label={"Email"} type={"text"} />
           <InputComponent label={"Password"} type={"text"} />
+<<<<<<< HEAD
+          <InputComponent label={"Phone"} type={"number"} />
+          <InputComponent label={"Code University"} type={"number"} />
+=======
+>>>>>>> main
          <ButtonComponent label="Confirmar"/>
         </div>
         <div className={style.passwordR}>
@@ -21,6 +27,10 @@ const Signup = () => {
           <span></span>
           <button>registrate aqui</button>
         </div>
+<<<<<<< HEAD
+        </div>
+=======
+>>>>>>> main
       </div>
     </div>
   );

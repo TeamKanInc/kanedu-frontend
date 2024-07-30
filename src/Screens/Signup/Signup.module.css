@@ -5,18 +5,25 @@
   align-items: center;
 }
 
-.form {
+.container_form{
   background-color: white;
-  padding: 4rem;
   width: 40rem;
-  height: 48rem;
+  height: 59rem;
   border-radius: 1rem;
+  padding: 5rem;
 }
 
-.form h1 {
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_form h1 {
   font-size: 2.4rem;
 }
-.form span {
+.container_form span {
   font-size: 1.2rem;
   color: gray;
 }
@@ -49,10 +56,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
+  height: 5rem;
+  border-bottom: 0.01rem solid #0069898f;
+}
+
+.passwordR:hover{
+  border-bottom: 0.01rem solid #006f91;  
+}
+
+.passwordR button:hover, .footer_message button:hover{
+  color: #0189b3;
+}
+
+=======
   border-bottom: 0.01rem solid #006989;
   height: 5rem;
 }
 
+>>>>>>> main
 .passwordR button{
   background-color: transparent;
   border: none;
