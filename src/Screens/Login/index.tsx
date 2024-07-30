@@ -1,45 +1,42 @@
+import { useState } from "react";
+import { ButtonComponent } from "../../components/ui/Button";
+import { GoogleComponent } from "../../components/ui/Google";
 import { InputComponent } from "../../components/ui/Input";
+import { useLogin } from "../../hooks";
 import styles from "./Login.module.css";
 
-const url = "https://accounts.google.com";
-
 const Login = () => {
+  const { login } = useLogin();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  console.log(email);
+
+  const handleLogin = () => {
+    login({ email, password });
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.form}>
-
         <div className={styles.img_logo_container}>
-          <img 
-          
-          className={styles.img_logo}
-          src="/img/logo.png" alt="logo"
-          
-          />
+          <img className={styles.img_logo} src="/img/logo.png" alt="logo" />
         </div>
-
-
 
         <div className={styles.header_form}>
           <h2>Bienvenido</h2>
-          <span>
-            Encantado de verte nuevamente, ¡inicia sesion!
-          </span>
+          <span>Encantado de verte nuevamente, ¡inicia sesion!</span>
         </div>
-        <div className={styles.container_input_social}>
-          <button onClick={() => window.open(url, "_blank")}>
-            <img
-              src="/img/google.svg"
-              alt="Google logo"
-              className={styles.button_logo}
-            />
-
-            <b>Continua con Google</b>
-          </button>
-        </div>
+        <GoogleComponent />
         <div className={styles.container_input}>
-          <InputComponent label="Correo" type="text" />
-          <InputComponent label="Contraseña" type="password" />
-          <button>Acceder</button>
+          <InputComponent setInfo={setEmail} label="Correo" type="text" />
+          <InputComponent
+            setInfo={setPassword}
+            label="Contraseña"
+            type="password"
+          />
+          <ButtonComponent onClick={handleLogin} label="Acceder" />
         </div>
         <div className={styles.footer_message}>
           <span>Aun no tienes cuenta</span>

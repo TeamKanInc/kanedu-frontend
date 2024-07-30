@@ -13,8 +13,11 @@ const Signup = () => {
           <InputComponent label={"Nombre"} type={"text"} />
           <InputComponent label={"Email"} type={"text"} />
           <InputComponent label={"Password"} type={"text"} />
+<<<<<<< HEAD
           <InputComponent label={"Phone"} type={"number"} />
           <InputComponent label={"Code University"} type={"number"} />
+=======
+>>>>>>> main
          <ButtonComponent label="Confirmar"/>
         </div>
         <div className={style.passwordR}>
@@ -24,7 +27,10 @@ const Signup = () => {
           <span></span>
           <button>registrate aqui</button>
         </div>
+<<<<<<< HEAD
         </div>
+=======
+>>>>>>> main
       </div>
     </div>
   );
