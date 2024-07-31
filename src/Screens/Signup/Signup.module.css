@@ -56,7 +56,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   height: 5rem;
   border-bottom: 0.01rem solid #0069898f;
 }
@@ -69,12 +68,6 @@
   color: #0189b3;
 }
 
-=======
-  border-bottom: 0.01rem solid #006989;
-  height: 5rem;
-}
-
->>>>>>> main
 .passwordR button{
   background-color: transparent;
   border: none;

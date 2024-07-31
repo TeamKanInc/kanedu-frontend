@@ -1,13 +1,13 @@
 export interface User {
   uuid: string;
   name: string;
-  phone: number;
+  phone: string;
   password: string;
-  rol: string;
-  photo: string;
-  university: string;
+  rol?: string;
+  photo?: string;
+  university?: string;
   code_university: string;
-  city: string;
+  city?: string;
   address?: string;
   email: string;
 }

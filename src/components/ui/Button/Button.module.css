@@ -1,5 +1,4 @@
 .button {
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,20 +18,3 @@
   .button button:hover{
     background-color: #027396;
   }
-=======
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    
-    .button button {
-      padding: 1rem;
-      border: none;
-      background-color: #006989;
-      color: white;
-      border-radius: 0.4rem;
-      cursor: pointer;
-      width: 33rem;
-    
-    }
->>>>>>> main
