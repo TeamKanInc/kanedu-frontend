@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.container_form{
+.container_form {
   background-color: white;
   width: 40rem;
   height: 59rem;
@@ -52,7 +52,7 @@
   font-weight: 600;
 }
 
-.passwordR{
+.passwordR {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +60,7 @@
   height: 5rem;
 }
 
-.passwordR button{
+.passwordR button {
   background-color: transparent;
   border: none;
   cursor: pointer;
