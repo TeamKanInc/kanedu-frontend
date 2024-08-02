@@ -1,7 +1,6 @@
 [build]
-  command = "CI='' npm run build"
-  publish = "/build"
-  base ="/"
+  command = "pnpm install && pnpm run build"
+  publish = "dist" 
 
 [[redirects]]
   from = "/*"
