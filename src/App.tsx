@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./Screens/Public/Login";
-import Signup from "./Screens/Public/Signup";
+import Login from "./Screens/Auth/Login";
+import Signup from "./Screens/Auth/Signup";
 import GuardRoutes from "./guard/ProtectedRoute";
 import Private from "./Screens/Private";
 
