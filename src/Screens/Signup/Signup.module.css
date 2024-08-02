@@ -35,23 +35,6 @@
   gap: 1rem;
 }
 
-.footer_message {
-  margin-top: 4rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer_message button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #006989;
-  text-transform: capitalize;
-  font-weight: 600;
-}
-
 .passwordR{
   display: flex;
   justify-content: center;

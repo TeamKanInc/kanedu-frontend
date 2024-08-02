@@ -4,6 +4,7 @@ import { GoogleComponent } from "../../components/ui/Google";
 import { InputComponent } from "../../components/ui/Input";
 import { useLogin } from "../../hooks";
 import styles from "./Login.module.css";
+import LinkButton from "../../components/ui/LinkButton";
 
 const Login = () => {
   const { login } = useLogin();
@@ -38,10 +39,7 @@ const Login = () => {
           />
           <ButtonComponent onClick={handleLogin} label="Acceder" />
         </div>
-        <div className={styles.footer_message}>
-          <span>Aun no tienes cuenta</span>
-          <button>registrate aqui</button>
-        </div>
+        <LinkButton url={'http://localhost:5173/registrarse'} label="¿No tienes una cuenta?" name="Registrate aqui" /> 
       </div>
     </div>
   );

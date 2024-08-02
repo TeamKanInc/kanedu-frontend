@@ -3,6 +3,7 @@ import { ButtonComponent } from "../../components/ui/Button";
 import { InputComponent } from "../../components/ui/Input";
 import { useSingup } from "../../hooks";
 import style from "./Signup.module.css";
+import LinkButton from "../../components/ui/LinkButton";
 
 const Signup = () => {
 
@@ -29,7 +30,7 @@ const Signup = () => {
         <div className={style.container_input}>
           <InputComponent setInfo={setName} label={"Nombre"} type={"text"}/>
           <InputComponent setInfo={setEmail} label={"Email"} type={"text"} />
-          <InputComponent setInfo={setPassword} label={"Password"} type={"text"} />
+          <InputComponent setInfo={setPassword} label={"Password"} type={"password"} />
           <InputComponent setInfo={setPhone} label={"Telefono"} type={"number"} />
           <InputComponent setInfo={setCode_university} label={"Code University"} type={"number"} />
          <ButtonComponent onClick={handleSingup} label="Confirmar"/>
@@ -37,10 +38,9 @@ const Signup = () => {
         <div className={style.passwordR}>
         <button>¿Has olvidado tu contraseña?</button>
         </div>
-      <div className={style.footer_message}>
-          <span></span>
-          <button>registrate aqui</button>
-        </div>
+
+        <LinkButton url={'http://localhost:5173'} label="¿Ya tienes cuenta?" name="Inicia sesion aqui"/>
+     
         </div>
       </div>
       </div>
