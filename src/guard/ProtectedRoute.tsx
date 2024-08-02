@@ -1,23 +1,28 @@
-import { Navigate, Outlet} from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { PrivateRoutes, PublicRoutes } from "../cosntants";
-import { useUser } from "../hooks";
+import { useUserByToken } from "../hooks";
 
 interface Props {
   isAuth: boolean;
-
 }
 
-const privateValidationFragment = <Outlet/>;
-const publicValidationFragment = <Navigate replace to = {PrivateRoutes.PRIVATE}/>;
+const privateValidationFragment = <Outlet />;
+const publicValidationFragment = (
+  <Navigate replace to={PrivateRoutes.PRIVATE} />
+);
 
-const GuardRoutes = ({isAuth}: Props) => {
+const GuardRoutes = ({ isAuth }: Props) => {
+  const { user } = useUserByToken();
 
-  const {isLoading, user}= useUser( );
-
-  return user !== null && user?.uuid ? (isAuth ? privateValidationFragment : publicValidationFragment) : <Navigate replace to = {PublicRoutes.LOGIN}/>;
-}
+  return user !== null && user?.uuid ? (
+    isAuth ? (
+      privateValidationFragment
+    ) : (
+      publicValidationFragment
+    )
+  ) : (
+    <Navigate replace to={PublicRoutes.LOGIN} />
+  );
+};
 
 export default GuardRoutes;
-
-
-
