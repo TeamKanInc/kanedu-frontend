@@ -1,16 +1,14 @@
 import { kanEduApi } from "../../api";
 import { createUserDto, User } from "../../models";
 
-export const LoginApi = async ({
-  email,
-  password,
-}: {
+interface LoginProps {
   email: string;
   password: string;
-}) => {
+}
+
+export const LoginApi = async ({ email, password }: LoginProps) => {
   const { data } = await kanEduApi.post("/signin", { email, password });
-  const { token } = data;
-  localStorage.setItem("token", JSON.stringify(token));
+  localStorage.setItem("token", JSON.stringify(data.token));
   return data;
 };
 
@@ -34,6 +32,7 @@ export const getCurrentUserApi = async (uuid: string) => {
 };
 
 export const getUserByTokenApi = async () => {
+  console.log("ENTRO A GET");
   const token = JSON.parse(localStorage.getItem("token") || "");
   const { data } = await kanEduApi.get(`/user`, {
     headers: {

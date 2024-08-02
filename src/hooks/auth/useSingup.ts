@@ -4,7 +4,6 @@ import { RegisterApi } from "../../Services";
 
 export const useSingup = () => {
   const navigate = useNavigate();
-
   const { mutate: signup, isLoading } = useMutation({
     mutationFn: RegisterApi,
     onSuccess: () => {
