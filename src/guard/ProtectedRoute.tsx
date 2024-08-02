@@ -14,15 +14,14 @@ const publicValidationFragment = (
 const GuardRoutes = ({ isAuth }: Props) => {
   const { user } = useUserByToken();
 
-  return user !== null && user?.uuid ? (
-    isAuth ? (
-      privateValidationFragment
-    ) : (
-      publicValidationFragment
-    )
-  ) : (
-    <Navigate replace to={PublicRoutes.LOGIN} />
-  );
-};
+  console.log("User:", user);
+  console.log("isAuth:", isAuth);
 
+  return user !== null && user?.uuid
+    ? isAuth
+      ? (console.log("Rendering private route"), privateValidationFragment)
+      : (console.log("Navigating to private route"), publicValidationFragment)
+    : (console.log("Navigating to login"),
+      (<Navigate replace to={PublicRoutes.LOGIN} />));
+};
 export default GuardRoutes;
