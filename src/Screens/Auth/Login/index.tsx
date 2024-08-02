@@ -7,7 +7,7 @@ import { useLoginGoogle } from "../../../hooks/auth/useLoginGoogle";
 import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
-  const { isLoading, login } = useLogin();
+  const { isPending, login } = useLogin();
   const { loginGoogle } = useLoginGoogle();
 
   const [email, setEmail] = useState("");
@@ -54,7 +54,7 @@ const Login = () => {
           />
           <ButtonComponent
             onClick={handleLogin}
-            label={isLoading ? "Cargando..." : "Acceder"}
+            label={isPending ? "Cargando..." : "Acceder"}
           />
         </div>
         <LinkButton

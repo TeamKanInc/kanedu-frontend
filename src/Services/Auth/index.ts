@@ -1,12 +1,13 @@
 import { kanEduApi } from "../../api";
 import { createUserDto, User } from "../../models";
 
-interface LoginProps {
+export const LoginApi = async ({
+  email,
+  password,
+}: {
   email: string;
   password: string;
-}
-
-export const LoginApi = async ({ email, password }: LoginProps) => {
+}) => {
   const { data } = await kanEduApi.post("/signin", { email, password });
   localStorage.setItem("token", JSON.stringify(data.token));
   return data;

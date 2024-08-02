@@ -4,12 +4,12 @@ import { RegisterApi } from "../../Services";
 
 export const useSingup = () => {
   const navigate = useNavigate();
-  const { mutate: signup, isLoading } = useMutation({
+  const { mutate: signup, isPending } = useMutation({
     mutationFn: RegisterApi,
     onSuccess: () => {
       navigate("/");
     },
   });
 
-  return { signup, isLoading };
+  return { signup, isPending };
 };
