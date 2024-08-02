@@ -46,9 +46,9 @@
   align-items: center;
 }
 
-.img_logo{
+.img_logo {
   width: 6rem;
-  height:5rem;
+  height: 5rem;
   margin-bottom: 0rem;
 }
 
@@ -56,3 +56,29 @@
   background-color: #005c78;
 }
 
+.social {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.social button {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  transition: 0.1s;
+}
+
+.social button img {
+  margin-inline: auto;
+  height: 2.4rem;
+}
+
+.social button:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}

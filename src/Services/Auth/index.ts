@@ -12,6 +12,13 @@ export const LoginApi = async ({ email, password }: LoginProps) => {
   return data;
 };
 
+export const loginGoogleApi = async (token_id: string) => {
+  const { data } = await kanEduApi.post("/login-google", token_id);
+  const { token } = data;
+  localStorage.setItem("token", JSON.stringify(token));
+  return { data };
+};
+
 export const RegisterApi = async (user: createUserDto) => {
   const { data } = await kanEduApi.post("/signup", user);
   const { token } = data;
