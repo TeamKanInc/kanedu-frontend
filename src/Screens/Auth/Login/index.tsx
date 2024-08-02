@@ -1,24 +1,32 @@
 import { useState } from "react";
 import styles from "./Login.module.css";
 import { useLogin } from "../../../hooks";
-import {
-  ButtonComponent,
-  GoogleComponent,
-  InputComponent,
-} from "../../../components";
+import { ButtonComponent, InputComponent } from "../../../components";
 import LinkButton from "../../../components/ui/LinkButton";
+import { useLoginGoogle } from "../../../hooks/auth/useLoginGoogle";
+import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
 
 const Login = () => {
   const { isLoading, login } = useLogin();
+  const { loginGoogle } = useLoginGoogle();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  console.log(email);
-
   const handleLogin = () => {
     login({ email, password });
   };
+
+  const handleGoogleSuccess = async (
+    credentialsResponse: CredentialResponse
+  ) => {
+    if (credentialsResponse.credential) {
+      const token_id = credentialsResponse.credential;
+      loginGoogle(token_id);
+    }
+  };
+
+  const handleGoogleError = () => {};
 
   return (
     <div className={styles.container}>
@@ -30,7 +38,13 @@ const Login = () => {
           <h2>Bienvenido</h2>
           <span>Encantado de verte nuevamente, ¡inicia sesion!</span>
         </div>
-        <GoogleComponent />
+        <div className={styles.social}>
+          <GoogleLogin
+            useOneTap
+            onError={handleGoogleError}
+            onSuccess={handleGoogleSuccess}
+          />
+        </div>
         <div className={styles.container_input}>
           <InputComponent setInfo={setEmail} label="Correo" type="email" />
           <InputComponent

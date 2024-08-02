@@ -10,12 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-oauth/google": "^0.12.1",
+    "@tanstack/react-query": "^5.24.6",
+    "@tanstack/react-query-devtools": "~4.33.0",
     "axios": "^1.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.24.0",
-    "@tanstack/react-query": "~4.32.6",
-    "@tanstack/react-query-devtools": "~4.33.0"
+    "react-router-dom": "^6.24.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
