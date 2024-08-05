@@ -15,6 +15,9 @@
 
 .header_form {
   text-align: center;
+  margin-bottom: 1rem; /* Ajusta el valor según sea necesario */
+
+
 }
 
 .header_form h2 {
@@ -24,6 +27,7 @@
 .header_form span {
   font-size: 1.4rem;
   color: gray;
+  
 }
 
 .container_input {
@@ -60,6 +64,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  margin-top: 1rem; /* Ajusta el valor según sea necesario */
   gap: 1rem;
   width: 100%;
 }

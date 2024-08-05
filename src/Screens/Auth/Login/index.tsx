@@ -5,6 +5,7 @@ import { ButtonComponent, InputComponent } from "../../../components";
 import LinkButton from "../../../components/ui/LinkButton";
 import { useLoginGoogle } from "../../../hooks/auth/useLoginGoogle";
 import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
+import Header from "../../../components/ui/Header";
 
 const Login = () => {
   const { isPending, login } = useLogin();
@@ -29,6 +30,9 @@ const Login = () => {
   const handleGoogleError = () => {};
 
   return (
+    <>  
+    <Header/>
+
     <div className={styles.container}>
       <div className={styles.form}>
         <div className={styles.img_logo_container}>
@@ -38,6 +42,7 @@ const Login = () => {
           <h2>Bienvenido</h2>
           <span>Encantado de verte nuevamente, ¡inicia sesion!</span>
         </div>
+        
         <div className={styles.social}>
           <GoogleLogin
             useOneTap
@@ -64,6 +69,7 @@ const Login = () => {
         />
       </div>
     </div>
+    </>
   );
 };
 

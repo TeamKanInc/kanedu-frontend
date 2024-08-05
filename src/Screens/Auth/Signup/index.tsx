@@ -1,9 +1,13 @@
 import { ButtonComponent } from "../../../components/ui/Button";
+import Header from "../../../components/ui/Header";
 import { InputComponent } from "../../../components/ui/Input";
+import LinkButton from "../../../components/ui/LinkButton";
 import style from "./Signup.module.css";
 
 const Signup = () => {
   return (
+    <>  
+    <Header/>
     <div className={style.container}>
       <div className={style.container_form}>
         <h1>Registrarse</h1>
@@ -18,13 +22,15 @@ const Signup = () => {
           <div className={style.passwordR}>
             <button>¿Has olvidado tu contraseña?</button>
           </div>
-          <div className={style.footer_message}>
-            <span></span>
-            <button>registrate aqui</button>
-          </div>
+          <LinkButton
+          url={"http://localhost:5173/login"}
+          label="¿Ya tienes una cuenta?"
+          name="Inicia sesión aqui"
+        />
         </div>
       </div>
     </div>
+    </>
   );
 };
 
