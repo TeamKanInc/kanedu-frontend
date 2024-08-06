@@ -28,7 +28,6 @@ dist-ssr/
 .nuxt/
 .svelte-kit/
 out/
-public/
 coverage/
 build/
 
