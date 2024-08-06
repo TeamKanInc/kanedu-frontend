@@ -1,6 +1,6 @@
 import Header from "../../components/ui/Header";
 import styles from "./NotFound.module.css";
-import img from "/public/img/notf.png"
+import img from "/img/notf.png"
 const NotFound = () => {
   return (
   
