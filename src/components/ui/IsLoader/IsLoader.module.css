@@ -1,9 +1,8 @@
 .container {
     width: 100%;
-    height: 35rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 61.2rem;
+    position: absolute;
+    background-color: #5a60634b;
   }
   
   .lds_ellipsis,
@@ -15,6 +14,8 @@
     position: relative;
     width: 80px;
     height: 80px;
+    top: 30rem;
+    left: 47%;
   }
   .lds_ellipsis div {
     position: absolute;
@@ -22,7 +23,7 @@
     width: 13.33333px;
     height: 13.33333px;
     border-radius: 50%;
-    background: #006989;
+    background: #017da3;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
   .lds_ellipsis div:nth-child(1) {
