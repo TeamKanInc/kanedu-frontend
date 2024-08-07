@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { ButtonComponent } from "../../../components/ui/Button";
 import Header from "../../../components/ui/Header";
 import { InputComponent } from "../../../components/ui/Input";
@@ -5,6 +6,10 @@ import LinkButton from "../../../components/ui/LinkButton";
 import style from "./Signup.module.css";
 
 const Signup = () => {
+  const navigate = useNavigate();
+  const handleLoginClick = () => {
+    navigate("/login")
+  }
   return (
     <>  
     <Header/>
@@ -23,7 +28,7 @@ const Signup = () => {
             <button>¿Has olvidado tu contraseña?</button>
           </div>
           <LinkButton
-          url={"http://localhost:5173/login"}
+          url={handleLoginClick}
           label="¿Ya tienes una cuenta?"
           name="Inicia sesión aqui"
         />
