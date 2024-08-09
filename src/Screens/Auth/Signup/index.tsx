@@ -1,11 +1,23 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ButtonComponent } from "../../../components/ui/Button";
 import Header from "../../../components/ui/Header";
 import { InputComponent } from "../../../components/ui/Input";
-import LinkButton from "../../../components/ui/LinkButton";
+import { useSingup } from "../../../hooks";
 import style from "./Signup.module.css";
+import LinkButton from "../../../components/ui/LinkButton";
+
 
 const Signup = () => {
+  const { isPending, signup } = useSingup();
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSingup = () => {
+    signup({ name, email, password });
+  };
+
   const navigate = useNavigate();
   const handleLoginClick = () => {
     navigate("/login")
@@ -19,10 +31,12 @@ const Signup = () => {
         <span>Ingresa los detalles para crear tu cuenta</span>
         <div className={style.form}>
           <div className={style.container_input}>
-            <InputComponent label={"Nombre"} type={"text"} />
-            <InputComponent label={"Email"} type={"text"} />
-            <InputComponent label={"Password"} type={"text"} />
-            <ButtonComponent label="Confirmar" />
+            <InputComponent setInfo={setName} label={"Nombre"} type={"text"} />
+            <InputComponent setInfo={setEmail} label={"Email"} type={"email"} />
+            <InputComponent setInfo={setPassword} label={"Password"} type={"password"} />
+            <ButtonComponent 
+            onClick={handleSingup}
+            label={"Confirmar"} />
           </div>
           <div className={style.passwordR}>
             <button>¿Has olvidado tu contraseña?</button>

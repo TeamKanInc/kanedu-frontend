@@ -7,7 +7,7 @@ export const useSingup = () => {
   const { mutate: signup, isPending } = useMutation({
     mutationFn: RegisterApi,
     onSuccess: () => {
-      navigate("/");
+      navigate("/login");
     },
   });
 
