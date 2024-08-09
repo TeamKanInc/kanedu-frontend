@@ -57,7 +57,7 @@ const Login = () => {
             />
             <ButtonComponent
               onClick={handleLogin}
-              label={isPending ? "Cargando..." : "Acceder"}
+              label={"Acceder"}
             />
           </div>
           <LinkButton

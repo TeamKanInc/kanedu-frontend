@@ -20,6 +20,13 @@ export const loginGoogleApi = async (token_id: string) => {
   return { data };
 };
 
+export const singupGoogleApi = async (user: createUserDto) => {
+  const { data } = await kanEduApi.post("/signup-google", user);
+  const { token } = data;
+  localStorage.setItem("token", JSON.stringify(token));
+  return token;
+}
+
 export const RegisterApi = async (user: createUserDto) => {
   const { data } = await kanEduApi.post("/signup", user);
   const { token } = data;
