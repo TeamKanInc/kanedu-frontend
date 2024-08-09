@@ -6,6 +6,9 @@ import LinkButton from "../../../components/ui/LinkButton";
 import { useLoginGoogle } from "../../../hooks/auth/useLoginGoogle";
 import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
 import { IsLoaderComponent } from "../../../components/ui/IsLoader";
+import Header from "../../../components/ui/Header";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
   const { isPending, login } = useLogin();
@@ -29,8 +32,13 @@ const Login = () => {
 
   const handleGoogleError = () => {};
 
+  const navigate = useNavigate();
+  const handleSignupClick = () => {
+    navigate("/registrarse")
+  }
   return (
     <>
+      <Header/>
       {isPending ? <IsLoaderComponent /> : null}
       <div className={styles.container}>
         <div className={styles.form}>
@@ -61,7 +69,7 @@ const Login = () => {
             />
           </div>
           <LinkButton
-            url="http://localhost:5173/registrarse"
+            url={handleSignupClick}
             label="¿No tienes una cuenta?"
             name="Regístrate aquí"
           />

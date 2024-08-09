@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ButtonComponent } from "../../../components/ui/Button";
+import Header from "../../../components/ui/Header";
 import { InputComponent } from "../../../components/ui/Input";
 import { useSingup } from "../../../hooks";
 import style from "./Signup.module.css";
+import LinkButton from "../../../components/ui/LinkButton";
+
 
 const Signup = () => {
   const { isPending, signup } = useSingup();
- 
-
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -16,7 +18,13 @@ const Signup = () => {
     signup({ name, email, password });
   };
 
+  const navigate = useNavigate();
+  const handleLoginClick = () => {
+    navigate("/login")
+  }
   return (
+    <>  
+    <Header/>
     <div className={style.container}>
       <div className={style.container_form}>
         <h1>Registrarse</h1>
@@ -33,13 +41,15 @@ const Signup = () => {
           <div className={style.passwordR}>
             <button>¿Has olvidado tu contraseña?</button>
           </div>
-          <div className={style.footer_message}>
-            <span></span>
-            <button>registrate aqui</button>
-          </div>
+          <LinkButton
+          url={handleLoginClick}
+          label="¿Ya tienes una cuenta?"
+          name="Inicia sesión aqui"
+        />
         </div>
       </div>
     </div>
+    </>
   );
 };
 

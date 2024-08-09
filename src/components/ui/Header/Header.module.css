@@ -1,0 +1,78 @@
+header {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 45rem;
+  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.075);
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 1rem;
+  width: 100rem;
+  flex-direction: row;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0rem 0.5rem;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  margin-right: 9rem
+}
+
+.header img{
+    margin-left: 2rem;
+    height: 6.5rem;
+}
+
+.button_login {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border: 0.1rem solid #0069899d;
+  border-radius: 0.4rem;
+  width: 10rem;
+  height: 3.5rem;
+  cursor: pointer;
+}
+
+.button_signup{
+    padding: 1rem;
+    border: none;
+    background-color: #006989;
+    color: white;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    width: 10rem;
+    height: 3.5rem;
+  }
+  
+  .button_signup:hover {
+    background-color: #027396;
+    
+  }
+
+  .button_login:hover, .button_signup:hover {
+    transform: scale(1.08);
+  }
+
+  .header a {
+    display: inline-block; /* Asegura que el elemento <a> pueda transformarse */
+  }
+  
+  .header a:hover {
+    color: #006989;
+    transform: scale(1.08);
+  }
