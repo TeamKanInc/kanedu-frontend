@@ -51,9 +51,10 @@
 }
 
 .img_logo {
-  width: 6rem;
+  width: 5rem;
   height: 5rem;
   margin-bottom: 0rem;
+  filter: drop-shadow(0.1rem 0.1rem 0.3rem #1b97bd);
 }
 
 .container_input button:hover {

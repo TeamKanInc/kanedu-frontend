@@ -6,7 +6,7 @@ import { InputComponent } from "../../../components/ui/Input";
 import { useSingup } from "../../../hooks";
 import style from "./Signup.module.css";
 import LinkButton from "../../../components/ui/LinkButton";
-
+import { IsLoaderComponent } from "../../../components/ui/IsLoader";
 
 const Signup = () => {
   const { isPending, signup } = useSingup();
@@ -20,35 +20,49 @@ const Signup = () => {
 
   const navigate = useNavigate();
   const handleLoginClick = () => {
-    navigate("/login")
-  }
+    navigate("/login");
+  };
   return (
-    <>  
-    <Header/>
-    <div className={style.container}>
-      <div className={style.container_form}>
-        <h1>Registrarse</h1>
-        <span>Ingresa los detalles para crear tu cuenta</span>
-        <div className={style.form}>
-          <div className={style.container_input}>
-            <InputComponent setInfo={setName} label={"Nombre"} type={"text"} />
-            <InputComponent setInfo={setEmail} label={"Email"} type={"email"} />
-            <InputComponent setInfo={setPassword} label={"Password"} type={"password"} />
-            <ButtonComponent 
-            onClick={handleSingup}
-            label={"Confirmar"} />
+    <>
+      <Header />
+      {isPending ? <IsLoaderComponent /> : null}
+      <div className={style.container}>
+        <div className={style.container_form}>
+          <div className={style.img_logo_container}>
+            <img className={style.img_logo} src="/img/logo.png" alt="logo" />
           </div>
-          <div className={style.passwordR}>
-            <button>¿Has olvidado tu contraseña?</button>
+          <h1>Registrarse</h1>
+          <span>Ingresa los detalles para crear tu cuenta</span>
+          <div className={style.form}>
+            <div className={style.container_input}>
+              <InputComponent
+                setInfo={setName}
+                label={"Nombre"}
+                type={"text"}
+              />
+              <InputComponent
+                setInfo={setEmail}
+                label={"Email"}
+                type={"email"}
+              />
+              <InputComponent
+                setInfo={setPassword}
+                label={"Password"}
+                type={"password"}
+              />
+              <ButtonComponent onClick={handleSingup} label={"Confirmar"} />
+            </div>
+            <div className={style.passwordR}>
+              <button>¿Has olvidado tu contraseña?</button>
+            </div>
+            <LinkButton
+              url={handleLoginClick}
+              label="¿Ya tienes una cuenta?"
+              name="Inicia sesión aqui"
+            />
           </div>
-          <LinkButton
-          url={handleLoginClick}
-          label="¿Ya tienes una cuenta?"
-          name="Inicia sesión aqui"
-        />
         </div>
       </div>
-    </div>
     </>
   );
 };
