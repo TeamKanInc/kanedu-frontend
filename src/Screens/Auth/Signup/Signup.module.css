@@ -7,8 +7,8 @@
 
 .container_form {
   background-color: white;
-  width: 43rem;
-  height: 57rem;
+  width: 40rem;
+  height: 59rem;
   border-radius: 1rem;
   padding: 5rem;
 }
@@ -23,7 +23,7 @@
 .img_logo_container {
   display: flex;
   justify-content: left;
-  margin: 0rem 7rem 0rem 0rem;
+  margin: 0rem 0rem 2.5rem 0rem;
 }
 
 .img_logo {
