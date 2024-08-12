@@ -23,6 +23,7 @@
 .img_logo_container {
   display: flex;
   justify-content: left;
+  margin: 0rem 7rem 0rem 0rem;
 }
 
 .img_logo {
