@@ -3,7 +3,7 @@
   flex-direction: column;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.4rem;
-  padding: 0.6rem;
+  padding: 0.7rem;
 }
 
 .Input input {
@@ -11,7 +11,7 @@
   outline: none;
 }
 
-.Input span {
+.Input p {
   font-size: 1.2rem;
   color: gray;
 }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ButtonComponent } from "../../../components/ui/Button";
-import Header from "../../../components/ui/Header";
 import { InputComponent } from "../../../components/ui/Input";
 import { useSingup } from "../../../hooks";
 import style from "./Signup.module.css";
@@ -24,7 +23,6 @@ const Signup = () => {
   };
   return (
     <>
-      <Header />
       {isPending ? <IsLoaderComponent /> : null}
       <div className={style.container}>
         <div className={style.container_form}>

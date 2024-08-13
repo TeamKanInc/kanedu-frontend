@@ -10,7 +10,7 @@ interface Props {
 export const InputComponent = ({ label, type, setInfo }: Props) => {
   return (
     <div className={styles.Input}>
-      <span>{label}</span>
+      <p>{label}</p>
       <input type={type} onChange={(e) => setInfo!(e.target.value)} />
     </div>
   );

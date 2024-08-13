@@ -1,23 +1,26 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
 .form {
-  padding: 4rem;
-  background-color: #fff;
-  width: 40rem;
-  height: 50rem;
   border-radius: 1rem;
+}
+
+.form_login_google {
+  background-color: #fff;
+  padding: 4rem;
+  width: 40rem;
+  height: 54rem;
+  border-radius: 0.4rem;
 }
 
 .header_form {
   text-align: center;
-  margin-bottom: 1rem; /* Ajusta el valor según sea necesario */
-
-
+  margin-bottom: 1rem;
 }
 
 .header_form h2 {
@@ -27,7 +30,6 @@
 .header_form span {
   font-size: 1.4rem;
   color: gray;
-  
 }
 
 .container_input {
@@ -62,18 +64,10 @@
 }
 
 .social {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem; /* Ajusta el valor según sea necesario */
-  gap: 1rem;
-  width: 100%;
+  margin-top: 2rem;
 }
 
 .social button {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
-  height: 4rem;
   border-radius: 0.5rem;
   transition: 0.1s;
 }
@@ -86,3 +80,11 @@
 .social button:hover {
   background-color: rgba(0, 0, 0, 0.02);
 }
+
+.O {
+  position: relative;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+
