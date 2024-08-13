@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm install && pnpm run build"
+  command = "pnpm install --force && pnpm run build"
   publish = "dist"
 
 [[redirects]]
