@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container_imagen {
+  display: flex;
+  margin-top: -19rem;
+  margin-bottom: 50px;
+  margin-bottom: 8px; /* Reduce el margen inferior */
+}
+
+.container_imagen img {
+  display: flex;
+  width: 56vh; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1.6rem;
+  color: rgb(34, 34, 34);
+  letter-spacing: 0.6rem; /* Ajusta el espaciado entre letras */
+}
+
+span {
+  font-size: 1.9rem;
+  margin-top: 1rem;
+  color: grey;
+}

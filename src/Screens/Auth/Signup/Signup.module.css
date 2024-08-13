@@ -20,6 +20,19 @@
   align-items: center;
 }
 
+.img_logo_container {
+  display: flex;
+  justify-content: left;
+  margin: 0rem 0rem 2.5rem 0rem;
+}
+
+.img_logo {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 0rem;
+  filter: drop-shadow(0.1rem 0.1rem 0.3rem #1b97bd);
+}
+
 .container_form h1 {
   font-size: 2.4rem;
 }
