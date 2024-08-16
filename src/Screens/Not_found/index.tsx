@@ -16,6 +16,7 @@ const NotFound = () => {
       <p></p>
       <span>Tal vez puedes intentar una nueva busqueda.</span>
       </div>
+      
     </div>
    
     </>

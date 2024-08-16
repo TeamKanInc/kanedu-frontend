@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
@@ -20,9 +19,7 @@ const { VITE_GOOGLE_CLIENT_ID } = import.meta.env;
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <QueryClientProvider client={queryClient}>
     <GoogleOAuthProvider clientId={VITE_GOOGLE_CLIENT_ID}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <App />
     </GoogleOAuthProvider>
   </QueryClientProvider>
 );
