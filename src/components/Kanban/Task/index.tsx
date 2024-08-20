@@ -15,7 +15,7 @@ const Task = ({ id, title,description,urgency}: Props) => {
         attributes,
         listeners,
         setNodeRef,
-        isDragging,
+       // isDragging,
       } = useSortable({
         id: id,
         data: {

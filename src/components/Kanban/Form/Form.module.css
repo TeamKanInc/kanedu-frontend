@@ -1,0 +1,32 @@
+  .Input {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.4rem;
+    padding: 0.7rem;
+  }
+  
+  .Input input {
+    border: none;
+    outline: none;
+  }
+  
+  .Input p {
+    font-size: 1.2rem;
+    color: gray;
+  }
+  
+  .containerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .containerForm_input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }

@@ -1,4 +1,5 @@
 export * from './Kanban/Column/index';
+export * from './Kanban/Form/index';
 export * from './Kanban/Modal/index';
 export * from './Kanban/Task/index';
 export * from './Layout/index';

@@ -9,7 +9,7 @@ const  Header = () => {
     navigate("/login")
   }
   const handleSignupClick = () => {
-    navigate("/registrarse")
+    navigate("/signup")
   }
 
 

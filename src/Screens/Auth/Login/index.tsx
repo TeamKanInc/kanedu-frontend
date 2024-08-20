@@ -32,7 +32,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const handleSignupClick = () => {
-    navigate("/registrarse");
+    navigate("/signup");
   };
   return (
     <>

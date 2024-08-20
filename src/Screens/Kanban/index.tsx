@@ -1,24 +1,63 @@
 import { useState } from "react";
-import { InputComponent } from "../../components";
+import {
+  ButtonComponent,
+  InputComponent,
+  IsLoaderComponent,
+} from "../../components";
 import Modal from "../../components/Kanban/Modal";
-import { useModal } from "../../hooks";
+import { useModal, useTask } from "../../hooks";
 import style from "./Kanban.module.css";
 
 const Kanban = () => {
-  const {isOpen, openModal, closeModal} = useModal(false);
-  const [email, setEmail] = useState ("");
+  const { isOpen, openModal, closeModal } = useModal(false);
+  const { isPending, task } = useTask();
+  const [title, setTittle] = useState("");
+  const [description, setDescription] = useState("");
+  const [assignedTo, setAssignedTo] = useState("");
+  const [reporter, setReporter] = useState("");
+  const [urgency, setUrgency] = useState("");
+  const [statusTask, setStatusTask] = useState("");
+
+  const handleForm = () => {
+    task({ title, description, assignedTo, reporter, urgency, statusTask });
+  };
   return (
-    <div className={style.container}>
-      <h2>Brutooo</h2>
-      <div className={style.button}>
-        <button onClick={openModal}>add</button>
-        <Modal isOpen={isOpen} closeModal={closeModal} >
-        <InputComponent setInfo={setEmail} label="Correo" type="email" />
-             
-        </Modal>
+    <>
+      {isPending ? <IsLoaderComponent /> : null}
+      <div className={style.container}>
+        <h2>Kanban</h2>
+        <div>
+          <div className={style.button_task}>
+          <button onClick={openModal}>add task</button>
+          </div>
+          <Modal isOpen={isOpen} closeModal={closeModal}>
+            <div className={style.header_form}>
+              <span>Nueva tarea en NOMBRE DEL PROYECTO</span>
+            </div>
+            <div className={style.form_task}>
+              <div className={style.form}>
+                <div className={style.container_input_form}>
+                  <InputComponent setInfo={setTittle} label="titulo" />
+                  <InputComponent
+                    setInfo={setDescription}
+                    label="Descripcion"
+                  />
+                  <InputComponent setInfo={setAssignedTo} label="Asignado a" />
+                  <InputComponent setInfo={setReporter} label="asignado por" />
+                  <InputComponent setInfo={setUrgency} label="urgencia" />
+                  <InputComponent setInfo={setStatusTask} label="esatado inicial" />
+            
+                  <div>
+                    <ButtonComponent onClick={handleForm} label={"confirmar"} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Modal>
+        </div>
+        <div className={style.column}></div>
       </div>
-      <div className={style.column}></div>
-    </div>
+    </>
   );
 };
 

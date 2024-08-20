@@ -1,6 +1,8 @@
 export interface Task {
   uuid: string;
-  project: string;
+  project?: string;
+  title: string;
+  description: string;
   assignedTo: string;
   reporter: string;
   urgency: string;

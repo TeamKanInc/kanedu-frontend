@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<Navigate to="/login" />} />{/* Redirección por defecto */}
           <Route path={"/login"} element={<Login />} />
           <Route path={"/kanban"} element={<Kanban/>}/>
-          <Route path={"/registrarse"} element={<Signup />} />
+          <Route path={"/signup"} element={<Signup />} />
           <Route element={<GuardRoutes isAuth={true} />}>
             <Route path={"/Workzone/*"} element={<Private />} />
           </Route>
