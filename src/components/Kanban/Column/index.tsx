@@ -9,7 +9,7 @@ interface Props {
 
 }
 
-const Container = ({ id, children, title, description}: Props) => {
+const ContainerComponent = ({ id, children, title, description}: Props) => {
   const {
     attributes,
     setNodeRef,
@@ -30,4 +30,4 @@ const Container = ({ id, children, title, description}: Props) => {
   );
 };
 
-export default Container;
+export default ContainerComponent;

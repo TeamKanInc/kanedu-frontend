@@ -28,30 +28,22 @@ const Kanban = () => {
         <h2>Kanban</h2>
         <div>
           <div className={style.button_task}>
-          <button onClick={openModal}>add task</button>
+            <button onClick={openModal}>add task</button>
           </div>
-          <Modal isOpen={isOpen} closeModal={closeModal}>
-            <div className={style.header_form}>
-              <span>Nueva tarea en NOMBRE DEL PROYECTO</span>
-            </div>
-            <div className={style.form_task}>
-              <div className={style.form}>
-                <div className={style.container_input_form}>
-                  <InputComponent setInfo={setTittle} label="titulo" />
-                  <InputComponent
-                    setInfo={setDescription}
-                    label="Descripcion"
-                  />
-                  <InputComponent setInfo={setAssignedTo} label="Asignado a" />
-                  <InputComponent setInfo={setReporter} label="asignado por" />
-                  <InputComponent setInfo={setUrgency} label="urgencia" />
-                  <InputComponent setInfo={setStatusTask} label="esatado inicial" />
-            
-                  <div>
-                    <ButtonComponent onClick={handleForm} label={"confirmar"} />
-                  </div>
-                </div>
-              </div>
+          <Modal
+            label="Agregar nueva tarea en: name project"
+            isOpen={isOpen}
+            closeModal={closeModal}
+          >
+            <InputComponent setInfo={setTittle} label="titulo" />
+            <InputComponent setInfo={setDescription} label="Descripcion" />
+            <InputComponent setInfo={setAssignedTo} label="Asignado a" />
+            <InputComponent setInfo={setReporter} label="asignado por" />
+            <InputComponent setInfo={setUrgency} label="urgencia" />
+            <InputComponent setInfo={setStatusTask} label="esatado inicial" />
+
+            <div>
+              <ButtonComponent onClick={handleForm} label={"confirmar"} />
             </div>
           </Modal>
         </div>
