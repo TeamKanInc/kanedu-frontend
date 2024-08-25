@@ -21,15 +21,15 @@ const Modal: React.FC<Props> = ({ label, isOpen, closeModal, children }) => {
         className={style.modal_container}
         onClick={handleModalContainerClick}
       >
-        <button className={style.modal_close} onClick={closeModal}>
-          X
-        </button>
         <div className={style.header_form}>
           <span>{label}</span>
         </div>
         <div className={style.form_task}>
           <div className={style.form}>
             <div className={style.container_input_form}>{children}</div>
+        <button className={style.modal_close} onClick={closeModal}>
+          cancelar
+        </button>
           </div>
         </div>
       </div>

@@ -46,8 +46,24 @@
 }
 
 .form {
-  border-radius: 1rem;
+  display: flex;
 }
+
+.form button{
+border: 0.1rem solid #585858;
+border-radius: 0.5rem;
+top: 42.4rem;
+left: 53%;
+right: 4.5rem;
+padding: 0.9rem;
+font-size: 1.3rem;
+font-weight: 600;
+}
+
+.form button:hover{
+  background-color: #dbdbdb;
+}
+
 .container_input_form {
   display: flex;
   flex-direction: column;
