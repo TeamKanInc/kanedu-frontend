@@ -1,4 +1,5 @@
 export interface Project{
+    uuid: string;
     workZone: string;
     projectName: string;
     members: string[];
