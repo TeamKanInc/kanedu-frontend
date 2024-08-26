@@ -1,2 +1,5 @@
 export * from './Auth';
-export * from './Kanban';
+export * from './Kanban/task';
+export * from './Kanban/project'
+export * from './Kanban/task'
+export * from './Kanban/workzone'
