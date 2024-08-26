@@ -35,15 +35,17 @@ const Kanban = () => {
             isOpen={isOpen}
             closeModal={closeModal}
           >
+            <div className={style.formulary}>
             <InputComponent setInfo={setTittle} label="titulo" />
             <InputComponent setInfo={setDescription} label="Descripcion" />
             <InputComponent setInfo={setAssignedTo} label="Asignado a" />
             <InputComponent setInfo={setReporter} label="asignado por" />
             <InputComponent setInfo={setUrgency} label="urgencia" />
             <InputComponent setInfo={setStatusTask} label="esatado inicial" />
+            </div>
 
-            <div>
-              <ButtonComponent onClick={handleForm} label={"confirmar"} />
+            <div className={style.button}>
+              <ButtonComponent  onClick={handleForm} label={"confirmar"} />
             </div>
           </Modal>
         </div>
