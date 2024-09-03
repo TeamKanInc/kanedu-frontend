@@ -5,8 +5,7 @@ export interface Project{
     members: string[];
     leader: string;
     area: string;
-    startDate: Date;
-    endDate: Date;
+    endDate: string;
     description: string;
 }
 
