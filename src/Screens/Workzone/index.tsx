@@ -1,7 +1,7 @@
-import { ButtonComponent, InputComponent } from "../../../components";
-import Modal from "../../../components/Kanban/Modal";
-import Header from "../../../components/ui/Header";
-import { useModal } from "../../../hooks";
+import { ButtonComponent, InputComponent } from "../../components";
+import Modal from "../../components/Kanban/Modal";
+import Header from "../../components/ui/Header";
+import { useModal } from "../../hooks";
 import styles from "./Workzone.module.css";
 import add from "/public/img/add.svg";
 

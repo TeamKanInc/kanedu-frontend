@@ -10,20 +10,27 @@ interface Props {
   setInfoList?: Dispatch<SetStateAction<string[]>>;
 }
 
-<<<<<<< HEAD
-export const InputComponent = ({ label, type, slogan, setInfo }: Props) => {
+interface Props {
+  label?: string;
+  type?: string;
+  slogan?: string;
+  setInfo?: Dispatch<SetStateAction<string>>;
+  options?: string[];
+  setInfoList?: Dispatch<SetStateAction<string[]>>;
+}
+
+export const InputComponent = ({ label, type, setInfo }: Props) => {
   return (
-    <>
-      <div className={styles.Input}>
-        <div className={styles.name}>
-          <p>{label}</p>
-          <p>{slogan}</p>
-        </div>
-        <input type={type} onChange={(e) => setInfo!(e.target.value)} />
-      </div>
-=======
-export const InputComponent = ({
+    <div className={styles.Input}>
+      <span>{label}</span>
+      <input type={type} onChange={(e) => setInfo!(e.target.value)} />
+    </div>
+  );
+};
+
+/*export const InputComponent = ({
   label,
+  slogan,
   type,
   options,
   setInfo,
@@ -37,10 +44,11 @@ export const InputComponent = ({
       ) : (
         <div className={styles.Input}>
           <p>{label}</p>
+          <p>{slogan}</p>
           <input
             type={type}
             onChange={(e) => setInfo!(e.target.value)}
-            list={options ? "datalist-options" : undefined}
+            //list={options ? "datalist-options" : undefined}
           />
         </div>
       )}
@@ -51,7 +59,6 @@ export const InputComponent = ({
           ))}
         </datalist>
       )}
->>>>>>> b4a2b46f33cd78aef0c746f55a39e981acf9f0b7
     </>
   );
-};
+};*/

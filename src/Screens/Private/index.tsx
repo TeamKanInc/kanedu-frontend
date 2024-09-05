@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Workzone from "./Workzone";
+import Workzone from "../Workzone";
 
 const Private = () => {
   return (
     <Routes>
-      <Route path="/zona-trabajo" element={<Workzone />} />
+      <Route path="/work-zones" element={<Workzone />} />
     </Routes>
   );
 };

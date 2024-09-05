@@ -36,7 +36,10 @@ const Project = () => {
       <Header />
       <div>
         <h1>Proyectos</h1>
-        <ButtonComponent onClick={openModal} label={"new project"} />
+        <div>
+          <ButtonComponent onClick={openModal} label={"new project"} />
+        </div>
+
         <Modal
           label="nuevo preoyecto en tu workspace"
           isOpen={isOpen}
