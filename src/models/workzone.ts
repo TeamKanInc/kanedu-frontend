@@ -1,4 +1,5 @@
 export interface Workzone {
+  uuid: string;
   admin: string;
   zoneName: string;
   uniqueZoneCode: string;

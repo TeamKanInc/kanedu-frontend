@@ -11,7 +11,13 @@
   outline: none;
 }
 
-.Input p {
+.name p {
   font-size: 1.2rem;
   color: gray;
+}
+
+.name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

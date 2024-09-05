@@ -19,15 +19,6 @@
   background-color: #027396;
 }
 
-.button{
-  display: flex;
-  justify-content: left;
-}
-
-.button button{
-  width: 16.5rem;
-}
-
 .formulary{
   width: 32.5rem;
   display: flex;

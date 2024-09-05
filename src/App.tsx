@@ -5,6 +5,7 @@ import GuardRoutes from "./guard/ProtectedRoute";
 import Private from "./Screens/Private";
 import NotFound from "./Screens/Not_found";
 import Kanban from "./Screens/Kanban";
+import Workzone from "./Screens/Private/Workzone";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/login" />} />{/* Redirección por defecto */}
           <Route path={"/login"} element={<Login />} />
+          <Route path={"/workzone"} element={<Workzone />} />
           <Route path={"/kanban"} element={<Kanban/>}/>
           <Route path={"/signup"} element={<Signup />} />
           <Route element={<GuardRoutes isAuth={true} />}>

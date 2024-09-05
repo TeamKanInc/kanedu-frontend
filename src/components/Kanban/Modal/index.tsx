@@ -27,10 +27,10 @@ const Modal: React.FC<Props> = ({ label, isOpen, closeModal, children }) => {
         <div className={style.form_task}>
           <div className={style.form}>
             <div className={style.container_input_form}>{children}</div>
+          </div>
         <button className={style.modal_close} onClick={closeModal}>
           cancelar
         </button>
-          </div>
         </div>
       </div>
     </article>
